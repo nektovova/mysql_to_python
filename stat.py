@@ -21,13 +21,16 @@ count_selected = mycursor.rowcount
 print("total rows: ",count_selected)
 
 #сколько start у бота spytwibot
-
-#spytwibot_cursor = mydb.cursor()
-#spytwibot_cursor.execute("SELECT from Users where botname='spytwibot' and action='start'")
 mycursor.execute("SELECT * FROM Users where botname='spytwibot' and action='start'")
 myresult = mycursor.fetchall()
+count_selected = mycursor.rowcount
+print("spytwibot start action: ",count_selected)
 
-print("spytwibot start action: ",myresult)
+#сколько start у бота jpegerbot
+mycursor.execute("SELECT * FROM Users where botname='jpegerbot' and action='start'")
+myresult = mycursor.fetchall()
+count_selected = mycursor.rowcount
+print("jpegerbot start action: ",count_selected)
 
 
 
