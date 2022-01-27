@@ -15,3 +15,6 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
   print(x)
+
+count_selected = mycursor.rowcount
+print(count_selected)
